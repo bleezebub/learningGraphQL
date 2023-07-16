@@ -1,0 +1,26 @@
+type Query{
+    allCitizens:[Citizen]
+    getCitizen(citizenId: Int): Citizen
+}
+type Mutation{
+    createCitizen(citizen: CitizenInput): Citizen
+}
+input CitizenInput{
+    firstName:String!
+    secondName: String!
+    fatherName: String!
+    motherName: String!
+    aadharId: String!
+    panCard: String!
+    licenseNumber: String!
+}
+type Citizen {
+    id: ID! #! means can not be null
+    firstName:String
+    secondName: String
+    fatherName: String
+    motherName: String
+    aadharId: String
+    panCard: String
+    licenseNumber: String
+}
